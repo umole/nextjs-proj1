@@ -1,11 +1,20 @@
 import EventItem from './EventItem';
 
-function EventList(props: { Events: any; }) {
-    const { Events } = props;
+function EventList(props: { events: any; }) {
+    const { events } = props;
 
     return (
         <ul>
-            {Events.map((Event: any) => <EventItem />)}
+            {events.map((event: any) => (
+            <EventItem 
+                key={event.id}
+                id={event.id} 
+                title={event.title} 
+                location={event.location} 
+                date={event.date} 
+                image={event.image}
+            />
+            ))}
         </ul>
     );
 }

@@ -1,4 +1,5 @@
 import { getFeaturedEvents } from '../../nextjs-proj1/dymmy-data'
+import EventList from '@/components/events/EventList';
 
 function HomePage() {
   const featuredEvents = getFeaturedEvents();
@@ -6,7 +7,7 @@ function HomePage() {
 
   return (
     <div>
-      <h1>Homepage</h1>
+      <EventList events={featuredEvents} />
    </div>
   );
 }
