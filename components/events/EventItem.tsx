@@ -13,7 +13,7 @@ function EventItem({ id, title, location, date, image }: EventItemProps) {
   const options = {
     weekday: "long" as const,
     year: "numeric" as const,
-    month: "long" as const,
+    month: "long" as const, 
     day: "numeric" as const,
   };
   const formattedDate = new Date(date).toLocaleDateString('en-US', options);
@@ -27,7 +27,7 @@ function EventItem({ id, title, location, date, image }: EventItemProps) {
           <h2>{title}</h2>
           <div>
             <time>{formattedDate}</time>
-          </div>
+          </div> 
           <div>
             <address>{formattedAddress}</address>
           </div>
