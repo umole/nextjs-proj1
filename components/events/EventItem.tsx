@@ -21,7 +21,7 @@ function EventItem({ id, title, location, date, image }: EventItemProps) {
 
   return (
     <li>
-      <div>
+      <div >
         <Image src={image} alt={title} width={250} height={160} />
         <div>
           <h2>{title}</h2>
