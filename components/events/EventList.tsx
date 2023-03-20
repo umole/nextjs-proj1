@@ -4,7 +4,7 @@ function EventList(props: { events: any; }) {
     const { events } = props;
 
     return (
-        <ul>
+        <ul className="divide-y divide-gray">
             {events.map((event: any) => (
             <EventItem 
                 key={event.id}

@@ -20,24 +20,25 @@ function EventItem({ id, title, location, date, image }: EventItemProps) {
   const formattedAddress = location.replace(', ', '\n');
 
   return (
-    <li>
-      <div >
-        <Image src={image} alt={title} width={250} height={160} />
-        <div>
-          <h2>{title}</h2>
-          <div>
-            <time>{formattedDate}</time>
-          </div> 
-          <div>
-            <address>{formattedAddress}</address>
-          </div>
+
+    <li className="bg-white rounded-lg shadow-lg flex items-center mb-8 max-w-2/3" >
+      <div className="flex-shrink-0">
+        <Image src={image} alt={title} width={250} height={160} className="rounded-l-lg" />
+      </div>
+      <div className="p-6 flex-1">
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+        <div className="mb-4">
+          <time className="text-gray-600">{formattedDate}</time>
+        </div> 
+        <div className="mb-4">
+          <address className="text-gray-600">{formattedAddress}</address>
         </div>
-        <div>
-          <Link href={`/events/${id}`}>Explore Event</Link>
+        <div className="flex justify-end">
+          <Link href={`/events/${id}`} className="text-blue-500 hover:text-blue-700">Explore Event</Link>
         </div>
       </div>
     </li>
-    );
+  );
 }
 
 export default EventItem;
