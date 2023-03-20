@@ -6,7 +6,7 @@ function HomePage() {
 
 
   return (
-    <div>
+    <div  className="border-b-4 border-gray-700">
       <EventList events={featuredEvents} />
    </div>
   );
