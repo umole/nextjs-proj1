@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "../ui/button";
+import classes from "./event-item.module.css";
 
 interface EventItemProps {
   id: string;
@@ -35,6 +37,9 @@ function EventItem({ id, title, location, date, image }: EventItemProps) {
         </div>
         <div className="flex justify-end">
           <Link href={`/events/${id}`} className="text-blue-500 hover:text-blue-700">Explore Event</Link>
+        </div>
+        <div className="">
+          <Button>Explore Event</Button>
         </div>
       </div>
     </li>
