@@ -1,4 +1,4 @@
-import { getFeaturedEvents } from '../../nextjs-proj1/dymmy-data'
+import { getFeaturedEvents } from '../dummy-data'
 import EventList from '@/components/events/EventList';
 
 function HomePage() {

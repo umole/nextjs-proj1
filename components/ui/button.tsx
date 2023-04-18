@@ -8,8 +8,8 @@ function Button(props: {
     link: Url; events: any; 
 }) {
     return (
-        <Link href={props.link}>
-            <a className={classes.btn}>{props.children}</a>
+        <Link href={props.link} className={classes.btn}>
+            {props.children}
         </Link>
     );
 }
